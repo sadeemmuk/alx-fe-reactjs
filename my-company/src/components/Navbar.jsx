@@ -4,7 +4,7 @@ const NavBar = () => {
     return (
         <>
         <nav>
-            <ul style={{ backgroundColor:'Red', padding:' 20px'}}>
+            <ul style={{ display:'flex', justifyContent:'space-between', padding:' 20px'}}>
                 <li>
                     <Link to="/">Home</Link>
                 </li>
