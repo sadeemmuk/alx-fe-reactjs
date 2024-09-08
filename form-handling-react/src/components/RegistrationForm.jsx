@@ -10,14 +10,13 @@ const RegistrationForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const { username, email, password } = formData;
         console.log(formData);
+        if(!username) return <div>setErrors</div>
+        if(!email) return <div>setErrors</div>
+        if(!password) return <div>setErrors</div>
     };
 
-    const { username, email, password } = formData;
-
-    if(!username) return <div>setErrors</div>
-    if(!email) return <div>setErrors</div>
-    if(!password) return <div>setErrors</div>
 
     return (
         <form onSubmit={handleSubmit}>
