@@ -13,6 +13,8 @@ const RegistrationForm = () => {
         console.log(formData);
     };
 
+    const { username, email, password } = formData;
+
     if(!username) return <div>setErrors</div>
     if(!email) return <div>setErrors</div>
     if(!password) return <div>setErrors</div>
