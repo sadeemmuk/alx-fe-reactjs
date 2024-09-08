@@ -4,25 +4,37 @@ const RegistrationForm = () => {
     const [formData, setFormData] = useState({ username: '', email: '', password: ''});
 
     const handleChange = (e) => {
-        const { username, value } = e.target;
-        setFormData(prevState => ({ ...prevState, [username]: value}));
+        const { name, value } = e.target;
+        setFormData(prevState => ({ ...prevState, [name]: value}));
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { username, email, password } = formData;
         console.log(formData);
-        if(!username) return <div>setErrors</div>
-        if(!email) return <div>setErrors</div>
-        if(!password) return <div>setErrors</div>
+        if(!username) {
+           alert("Username is empty")
+           return
+        }
+        if(!email) {
+        alert("Email is empty")
+        return
+        }
+        if(!password){
+        alert("Password is empty")
+        return
+        }
+
     };
+
+    const { username, email, password } = formData;
+
 
 
     return (
         <form onSubmit={handleSubmit}>
             <input
             type="text"
-            name="name"
+            name="username"
             value={username}
             onChange={handleChange} 
             />
@@ -34,7 +46,7 @@ const RegistrationForm = () => {
             />
             <input
             type="password"
-            name="passowrd"
+            name="password"
             value={password}
             onChange={handleChange} 
             />
