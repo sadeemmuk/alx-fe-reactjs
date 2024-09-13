@@ -19,15 +19,15 @@ const HomePage = () => {
 
 
     return(
-        <div className="w-1/2 ml-auto mr-auto mt-20 ">
+        <div className="w-1/2 ml-auto mr-auto mt-20 flex ">
         <>
         {
         
             data.map((dataItem)=>(
-                <div key={dataItem.id} className=" mr-20 ">
+                <div key={dataItem.id} className=" mr-20 hover:bg-teal-200 shadow-lg text-center rounded p-10">
                     <image src={dataItem.image}></image>
-                    <h2>{dataItem.title}</h2>
-                    <p>{dataItem.summary}</p>
+                    <h2 className="text-xl font-bold">{dataItem.title}</h2>
+                    <p className="text-base">{dataItem.summary}</p>
                 </div>
             )
             )}
