@@ -19,7 +19,7 @@ const HomePage = () => {
 
 
     return(
-        <div className="w-1/2 ml-auto mr-auto mt-20 grid grid-cols-1 grid-cols-2 sm:grid-row-1 sm:grid-row-2 md:w-full  ">
+        <div className="w-1/2 ml-auto mr-auto mt-20 grid grid-cols-1 grid-cols-2 grid-cols-3 sm:grid-row-1 sm:grid-row-2 md:w-full  ">
         <>
         {
         
