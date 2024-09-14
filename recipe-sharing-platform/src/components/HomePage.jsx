@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useRecipes } from '../context/RecipeContext';
 import { Link } from 'react-router-dom'; // Import Link to navigate
 
 const HomePage = () => {
     const [data, setData] = useState([]);
+    const { recipes } = useRecipes();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,7 +26,6 @@ const HomePage = () => {
                     key={dataItem.id}
                     className="hover:bg-teal-200 shadow-lg text-center rounded p-10 flex flex-col items-center"
                 >
-                    <Link to={`/recipe/${dataItem.id}`}> {/* Link to the RecipeDetail page */}
                         <img
                             src={dataItem.image}
                             alt={dataItem.title}
@@ -32,7 +33,8 @@ const HomePage = () => {
                         />
                         <h2 className="text-xl font-bold">{dataItem.title}</h2>
                         <p className="text-base">{dataItem.summary}</p>
-                    </Link>
+                    <Link to={`/recipe/${dataItem.id}`} className='text-teal-500 mt-2'>
+                    View Recipe</Link>
                 </div>
             ))}
         </div>
