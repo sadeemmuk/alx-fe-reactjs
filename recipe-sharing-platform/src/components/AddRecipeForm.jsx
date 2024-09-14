@@ -15,7 +15,7 @@ const AddRecipeForm = () => {
 
     // Form validation
     const newErrors = {};
-    if (!title) newErrors.title = "Title is required";
+    if (!title) newErrors.title = "Title is not validate";
     if (!ingredients || ingredients.split("\n").length < 2)
       newErrors.ingredients = "Please include at least 2 ingredients";
     if (!steps) newErrors.steps = "Preparation steps are required";
