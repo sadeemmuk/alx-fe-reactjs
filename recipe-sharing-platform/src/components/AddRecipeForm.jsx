@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useRecipes } from "../context/RecipeContext";
+import { useNavigate } from "react-router-dom";
 
 const AddRecipeForm = () => {
-    const { addRecipe } = useRecipes();
-    const [title, setTitle] = useState("");
+  const { addRecipe } = useRecipes();
+  const navigate = useNavigate(); // For programmatic navigation
+  const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [steps, setSteps] = useState("");
   const [errors, setErrors] = useState({});
@@ -41,8 +43,8 @@ const AddRecipeForm = () => {
     setIngredients("");
     setSteps("");
 
-    // Redirect to home page or any other page
-    window.location.href = "/";
+    // Redirect to home page
+    navigate("/");
   };
 
   return (
