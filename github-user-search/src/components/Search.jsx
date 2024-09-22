@@ -34,7 +34,7 @@ const Search = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <button type="submit">Search</button>
+        <button type="submit">Login</button>
       </form>
 
       {/* Conditional rendering based on API state */}
