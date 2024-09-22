@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import { fetchGitHubUser } from './services/apiService';
+import Layout from './components/Layout';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -15,6 +16,7 @@ function App() {
   };
 
   return (
+    <Layout>
     <div>
       <h1>GitHub User Search</h1>
       <input
@@ -32,7 +34,8 @@ function App() {
           <a href={userData.html_url}>GitHub Profile</a>
         </div>
       )}
-    </div>
+    </div> 
+    </Layout>
   );
 }
 
